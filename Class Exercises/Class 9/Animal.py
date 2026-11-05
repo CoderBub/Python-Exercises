@@ -1,15 +1,27 @@
+#Polymorphism
 class Animal:
     def speak(self):
         pass
 
+    def walk(speak):
+        print("I am walking.")
+
 class Dog(Animal):
     def speak(self):
-        return "Woof!"
+        print("Woof!")
 
 class Cat(Animal):
     def speak(self):
-        return "Meow!"
+        print("Meow!")
 
-animals = [Dog(), Cat()]
-for a in animals:
-    print(a.speak())           # same call, different behavior
+class Owl(Animal):
+    def speak(self):
+        print("Hoot!")
+
+    def walk(self):
+        print("I am flying.")
+
+animals = [Dog(), Cat(), Owl()]
+for animal in animals:
+    animal.walk()
+    animal.speak()           # same call, different behavior
